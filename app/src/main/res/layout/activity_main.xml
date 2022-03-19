@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6A9D1B"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:weightSum="5"
+    tools:context=".MainActivity">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="2"
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:background="@drawable/spinner_inpupt"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/spinner_style"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <Spinner
+                            android:id="@+id/sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:popupBackground="#FCFCFC" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="#274F13"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Clear" />
+
+
+                </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/et"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/edit_text"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="Input Here"
+                android:paddingBottom="-20dp"
+                android:paddingLeft="10dp"
+                android:textColorHint="#707070"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/convert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#274F13"
+                android:fontFamily="@font/poppins_bold"
+                android:text="CONVERT"
+                android:paddingBottom="-10dp"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+<!--Output Display-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="3"
+        android:weightSum="4"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:background="@drawable/display_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@drawable/display"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:text="Decimal:"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/displayTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/decimalDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:text=" "
+                android:textColor="#274F13"
+                android:textIsSelectable="true"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/display"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:text="Binary:"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/displayTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/binDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#274F13"
+                android:textIsSelectable="true"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@drawable/display"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:text="Octal:"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/displayTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/octalDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#274F13"
+                android:textIsSelectable="true"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@drawable/display"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:text="Hexadecimal:"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/displayTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/hexaDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#274F13"
+                android:textIsSelectable="true"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
